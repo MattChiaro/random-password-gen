@@ -12,3 +12,10 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+// prompt length of password
+// do they want lowercase?
+// do they want uppercase?
+// do they want numbers?
+// do they want special char?
