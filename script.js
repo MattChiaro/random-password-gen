@@ -121,3 +121,13 @@ var numbers = [ // single digit numbers
 ]
 
 var passwordLength = prompt("How many characters/numbers would you like in your password?")
+
+if (isNaN(passwordLength)) {
+  alert("You must select a valid number!");
+}
+
+if (passwordLength > 128 || passwordLength < 8){
+  alert("You must select a number between 8 and 128")
+}
+
+
