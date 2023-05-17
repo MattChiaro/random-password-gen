@@ -120,3 +120,4 @@ var numbers = [ // single digit numbers
   9
 ]
 
+var passwordLength = prompt("How many characters/numbers would you like in your password?")
