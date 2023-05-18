@@ -45,8 +45,6 @@ function getRandomItem(array) {   // generates a random number between zero and 
   return array[randomIndex];
 }
 
-
-function passwordPrompt() {
   var abcUpper = [  //uppercase alphabet
     "A",
     "B",
@@ -140,6 +138,9 @@ function passwordPrompt() {
     9
   ]  
   
+
+function passwordPrompt() {
+
   function addCharTypes() { // series of prompts for Character Types
     if (confirm("Would you like uppercase letters in your password?")) { //prompt for uppercase
       newPassword.push(getRandomItem(abcUpper))
