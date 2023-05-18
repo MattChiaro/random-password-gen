@@ -120,6 +120,14 @@ var numbers = [ // single digit numbers
   9
 ]
 
+function getRandomItem(Array) {   // generates a random number between zero and the length of the array entered
+  return Math.floor(Math.random() * Array.length)
+}
+
+console.log();
+
+var newPassword = []; //empty array for each string of password
+
 var passwordLength = prompt("How many characters/numbers would you like in your password?")
 
 if (isNaN(passwordLength)) {
@@ -130,4 +138,8 @@ if (passwordLength > 128 || passwordLength < 8){
   alert("You must select a number between 8 and 128")
 }
 
+if (confirm("Would you like Uppercase Letters in your password?")){
 
+
+
+}
