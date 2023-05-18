@@ -164,7 +164,7 @@ var numbers = [ // single digit numbers
     newPasswordChoices.push(...numbers)
   }
 
-  if (newPassword < 1) {
+  if (newPassword < 1) { //
     alert("You must select some data type for your password.")
 
   }
@@ -175,10 +175,12 @@ var numbers = [ // single digit numbers
   }
 
   return newPassword.join("");
-  
+
 }
 
-
-function generatePassword() {
-  return passwordPrompt();
+function generatePassword() { // defines that passwordPrompt runs upon button press
+  newPassword = []; // clears array (to avoid bug on second iteration of generatePassword if prompted)
+  newPasswordChoices = []; // clears array (to avoid bug on second iteration of generatePassword if prompted)
+return passwordPrompt();
 }
+
