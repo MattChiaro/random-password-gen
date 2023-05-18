@@ -126,11 +126,8 @@ var newPassword = []; //empty array for each string of new password
 
 function getRandomItem(array) {   // generates a random number between zero and the length of the array entered and then prints the value of the array
   var randomIndex = Math.floor(Math.random() * array.length)
-  return array[randomIndex]
+  return array[randomIndex];
 }
-
-
-
 
 var passwordLength = prompt("How many characters/numbers would you like in your password?")
 
@@ -143,22 +140,23 @@ if (passwordLength > 128 || passwordLength < 8){
 }
 
 if (confirm("Would you like uppercase letters in your password?")){ //prompt for uppercase
-  newPassword.push(getRandomItem[abcUpper])
+  newPassword.push(getRandomItem(abcUpper))
   newPasswordChoices.push(...abcUpper)
 }
 
+
 if (confirm("Would you like lowercase letters in your password?")){ //prompt for lowercase
-  newPassword.push(getRandomItem[abcLower])
+  newPassword.push(getRandomItem(abcLower))
   newPasswordChoices.push(...abcLower)
 }
 
 if (confirm("Would you like special characters in your password?")){ //prompt for special characters
-  newPassword.push(getRandomItem[specialChar])
+  newPassword.push(getRandomItem(specialChar))
   newPasswordChoices.push(...specialChar)
 }
 
 if (confirm("Would you numbers in your password?")){
-  newPassword.push(getRandomItem[numbers])
+  newPassword.push(getRandomItem(numbers))
   newPasswordChoices.push(...numbers)
 }
  
