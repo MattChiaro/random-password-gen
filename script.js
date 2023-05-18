@@ -173,14 +173,14 @@ function passwordPrompt() {
     var addtlItem = getRandomItem(newPasswordChoices);
     newPassword.push(addtlItem)
   }
+
+  return newPassword.join("");
   
 }
 
-c
-
-// function generatePassword(){
-//   passwordPrompt();
-// }
+passwordPrompt()
+console.log(newPassword);
+console.log(newPassword.join(""));
 
 console.log(newPassword);
 console.log(newPasswordChoices);
