@@ -178,9 +178,9 @@ function passwordPrompt() {
   
 }
 
-passwordPrompt()
-console.log(newPassword);
-console.log(newPassword.join(""));
 
-console.log(newPassword);
-console.log(newPasswordChoices);
+function generatePassword() {
+  return passwordPrompt();
+}
+
+writePassword()
