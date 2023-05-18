@@ -182,5 +182,3 @@ function passwordPrompt() {
 function generatePassword() {
   return passwordPrompt();
 }
-
-writePassword()
