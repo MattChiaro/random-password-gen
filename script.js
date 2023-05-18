@@ -120,13 +120,16 @@ var numbers = [ // single digit numbers
   9
 ]
 
-function getRandomItem(Array) {   // generates a random number between zero and the length of the array entered
-  return Math.floor(Math.random() * Array.length)
+var newPasswordChoices = []; //empty array for each string of password
+
+function getRandomItem(array) {   // generates a random number between zero and the length of the array entered and then prints the value of the array
+  var randomIndex = Math.floor(Math.random() * array.length)
+  return array[randomIndex]
 }
 
-console.log();
+console.log(getRandomItem(abcLower));
 
-var newPassword = []; //empty array for each string of password
+
 
 var passwordLength = prompt("How many characters/numbers would you like in your password?")
 
@@ -139,6 +142,7 @@ if (passwordLength > 128 || passwordLength < 8){
 }
 
 if (confirm("Would you like Uppercase Letters in your password?")){
+
 
 
 
