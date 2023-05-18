@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var copyBtn = document.querySelector("#copy");
+// var copyBtn = document.querySelector("#copy"); // non-functioning, added copy button
 
 // Write password to the #password input
 function writePassword() {
@@ -10,13 +10,14 @@ function writePassword() {
   passwordText.value = password;
 }
 
-function copyPassword() {
-  document.execCommand('copy');
-}
+// function copyPassword() {
+//   document.execCommand('copy');
+// }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-copyBtn.addEventListener("click", copyPassword);
+// Copy button?
+// copyBtn.addEventListener("click", copyPassword(document.querySelector("#password")));
 
 
 
