@@ -129,37 +129,58 @@ function getRandomItem(array) {   // generates a random number between zero and 
   return array[randomIndex];
 }
 
-var passwordLength = prompt("How many characters/numbers would you like in your password?")
 
-if (isNaN(passwordLength)) {
-  alert("You must select a valid number!");
+function passwordPrompt() {
+
+  var passwordLength = prompt("How many characters/numbers would you like in your password?")
+
+  if (isNaN(passwordLength)) {
+    alert("You must select a valid number!");
+    passwordPrompt();
+  }
+
+  if (passwordLength > 128 || passwordLength < 8) {
+    alert("You must select a number between 8 and 128");
+    passwordPrompt();
+  }
+
+  if (confirm("Would you like uppercase letters in your password?")) { //prompt for uppercase
+    newPassword.push(getRandomItem(abcUpper))
+    newPasswordChoices.push(...abcUpper)
+  }
+
+  if (confirm("Would you like lowercase letters in your password?")) { //prompt for lowercase
+    newPassword.push(getRandomItem(abcLower))
+    newPasswordChoices.push(...abcLower)
+  }
+
+  if (confirm("Would you like special characters in your password?")) { //prompt for special characters
+    newPassword.push(getRandomItem(specialChar))
+    newPasswordChoices.push(...specialChar)
+  }
+
+  if (confirm("Would you numbers in your password?")) { //prompt for numbers
+    newPassword.push(getRandomItem(numbers))
+    newPasswordChoices.push(...numbers)
+  }
+
+  if (newPassword < 1) {
+    alert("You must select some data type for your password.")
+
+  }
+  
+  while (newPassword.length < passwordLength) {
+    var addtlItem = getRandomItem(newPasswordChoices);
+    newPassword.push(addtlItem)
+  }
+  
 }
 
-if (passwordLength > 128 || passwordLength < 8){
-  alert("You must select a number between 8 and 128")
-}
+c
 
-if (confirm("Would you like uppercase letters in your password?")){ //prompt for uppercase
-  newPassword.push(getRandomItem(abcUpper))
-  newPasswordChoices.push(...abcUpper)
-}
+// function generatePassword(){
+//   passwordPrompt();
+// }
 
-
-if (confirm("Would you like lowercase letters in your password?")){ //prompt for lowercase
-  newPassword.push(getRandomItem(abcLower))
-  newPasswordChoices.push(...abcLower)
-}
-
-if (confirm("Would you like special characters in your password?")){ //prompt for special characters
-  newPassword.push(getRandomItem(specialChar))
-  newPasswordChoices.push(...specialChar)
-}
-
-if (confirm("Would you numbers in your password?")){
-  newPassword.push(getRandomItem(numbers))
-  newPasswordChoices.push(...numbers)
-}
- 
 console.log(newPassword);
 console.log(newPasswordChoices);
- 
