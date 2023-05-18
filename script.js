@@ -142,7 +142,26 @@ if (passwordLength > 128 || passwordLength < 8){
   alert("You must select a number between 8 and 128")
 }
 
-if (confirm("Would you like Uppercase Letters in your password?")){
+if (confirm("Would you like uppercase letters in your password?")){ //prompt for uppercase
   newPassword.push(getRandomItem[abcUpper])
-  newPasswordChoices.push(abcUpper[])
+  newPasswordChoices.push(...abcUpper)
 }
+
+if (confirm("Would you like lowercase letters in your password?")){ //prompt for lowercase
+  newPassword.push(getRandomItem[abcLower])
+  newPasswordChoices.push(...abcLower)
+}
+
+if (confirm("Would you like special characters in your password?")){ //prompt for special characters
+  newPassword.push(getRandomItem[specialChar])
+  newPasswordChoices.push(...specialChar)
+}
+
+if (confirm("Would you numbers in your password?")){
+  newPassword.push(getRandomItem[numbers])
+  newPasswordChoices.push(...numbers)
+}
+ 
+console.log(newPassword);
+console.log(newPasswordChoices);
+ 
