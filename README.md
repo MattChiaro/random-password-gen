@@ -7,6 +7,8 @@ For every prompt that returns true, a random item from that array is added to th
 
 An additional planned feature would be to randomize the newPassword array prior to joining it into a string, as this would prevent the first characters of the password to match the order in which prompts were selected (see feature request in github issues)
 
+Please note, there is a bug that shows up periodically, documented in github issues. this WILL cause your password length to be incorrect if you encounter it! Slowly answer the prompts and everything will work as planned.
+
 
 ## Installation
 
