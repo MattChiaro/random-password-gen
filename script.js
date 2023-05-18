@@ -138,9 +138,6 @@ function getRandomItem(array) {   // generates a random number between zero and 
     9
   ]  
   
-
-function passwordPrompt() {
-
   function addCharTypes() { // series of prompts for Character Types
     if (confirm("Would you like uppercase letters in your password?")) { //prompt for uppercase
       newPassword.push(getRandomItem(abcUpper))
@@ -166,7 +163,10 @@ function passwordPrompt() {
       alert("You must select some data type for your password.");
       addCharTypes(); //loops back to start if no data types created
     }
-  }
+  }  
+
+function passwordPrompt() {
+
   var passwordLength = prompt("How many characters/numbers would you like in your password?")
 
   if (isNaN(passwordLength)) {
