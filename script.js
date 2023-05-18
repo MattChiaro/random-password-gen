@@ -120,14 +120,15 @@ var numbers = [ // single digit numbers
   9
 ]
 
-var newPasswordChoices = []; //empty array for each string of password
+var newPasswordChoices = []; //empty array for each possible string of password
+
+var newPassword = []; //empty array for each string of new password
 
 function getRandomItem(array) {   // generates a random number between zero and the length of the array entered and then prints the value of the array
   var randomIndex = Math.floor(Math.random() * array.length)
   return array[randomIndex]
 }
 
-console.log(getRandomItem(abcLower));
 
 
 
@@ -142,8 +143,6 @@ if (passwordLength > 128 || passwordLength < 8){
 }
 
 if (confirm("Would you like Uppercase Letters in your password?")){
-
-
-
-
+  newPassword.push(getRandomItem[abcUpper])
+  newPasswordChoices.push(abcUpper[])
 }
