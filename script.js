@@ -27,6 +27,19 @@ generateBtn.addEventListener("click", writePassword);
 
 // confirm
 
+
+
+var newPasswordChoices = []; //empty array for each possible string of password
+
+var newPassword = []; //empty array for each string of new password
+
+function getRandomItem(array) {   // generates a random number between zero and the length of the array entered and then prints the value of the array
+  var randomIndex = Math.floor(Math.random() * array.length)
+  return array[randomIndex];
+}
+
+
+function passwordPrompt() {
 var abcUpper = [  //uppercase alphabet
   "A",
   "B",
@@ -119,19 +132,6 @@ var numbers = [ // single digit numbers
   8,
   9
 ]
-
-var newPasswordChoices = []; //empty array for each possible string of password
-
-var newPassword = []; //empty array for each string of new password
-
-function getRandomItem(array) {   // generates a random number between zero and the length of the array entered and then prints the value of the array
-  var randomIndex = Math.floor(Math.random() * array.length)
-  return array[randomIndex];
-}
-
-
-function passwordPrompt() {
-
   var passwordLength = prompt("How many characters/numbers would you like in your password?")
 
   if (isNaN(passwordLength)) {
